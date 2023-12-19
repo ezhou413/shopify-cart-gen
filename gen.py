@@ -3,6 +3,10 @@ import sys
 import validators
 
 def gen_cart_link():
+    if len(sys.argv) < 2:
+        print("Please enter a filepath as an argument")
+        return
+    
     # open file
     file = open(sys.argv[1], newline='')
     data = list(csv.reader(file, delimiter=','))
@@ -25,6 +29,6 @@ def gen_cart_link():
         elif len(row) == 2: #case if a quantity is defined
             items.append(row[0] + ":" + row[1])
         
-    return url + ",".join(items) + "?payment=shop_pay"
+    print(url + ",".join(items) + "?payment=shop_pay")
     
-print(gen_cart_link())
+gen_cart_link()
