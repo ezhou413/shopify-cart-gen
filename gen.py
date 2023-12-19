@@ -21,6 +21,6 @@ def gen_cart_link():
         elif len(row) == 2:
             items.append(row[0] + ":" + row[1])
         
-    return url + ",".join(items)
+    return url + ",".join(items) + "?payment=shop_pay"
     
 print(gen_cart_link())
