@@ -14,5 +14,6 @@ The remaining lines are the variant IDs of the product and their corresponding q
 
 ## Potential Improvements
 
+- implement better cli argument parser (using a library?)
 - enable pasting of entire product link instead of just the variant id
 - validate that the base url of all product links are the same
