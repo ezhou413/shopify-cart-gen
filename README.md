@@ -8,12 +8,12 @@ A script to automatically generate a checkout link from a csv of Shopify product
 
 ## File Format
 
-Line 1 contains the BASE url to the site, for example `https://osume.com/`. The script will automatically append `cart/`.
+Line 1 contains the BASE url to the site, for example `https://osume.com/`. 
 
-The remaining lines are the variant IDs of the product and their corresponding quantities. Defining quantities is optional, if no quantity is defined, it will default to 1.
+The remaining lines are the variant IDs of the product and their corresponding quantities, with each line of the form `<variant_id>,<quantity>`. Defining quantities is optional, if no quantity is defined, it will default to 1.
 
 ## Potential Improvements
 
 - implement better cli argument parser (using a library?)
 - enable pasting of entire product link instead of just the variant id
-- validate that the base url of all product links are the same
+- validate that the base url of all product links are the same (validation for above improvement)
